@@ -1,0 +1,80 @@
+﻿@model Harmic.Models.TbProduct
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-6">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Xóa sản phẩm</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tiêu đề: </label>
+                                @Html.DisplayFor(model => model.Title)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Alias: </label>
+                                @Html.DisplayFor(model => model.Alias)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Ảnh: </label>
+                                <img src="@Html.DisplayFor(model => model.Image)" width="50" height="50"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Giá: </label>
+                                @Html.DisplayFor(model => model.Price)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Giá giảm: </label>
+                                @Html.DisplayFor(model => model.PriceSale)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Số lượng: </label>
+                                @Html.DisplayFor(model => model.Quantity)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">SP mới: </label>
+                                @Html.DisplayFor(model => model.IsNew)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Bán chạy: </label>
+                                @Html.DisplayFor(model => model.IsBestSeller)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Sao: </label>
+                                @Html.DisplayFor(model => model.Star)
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Hiện: </label>
+                                @Html.DisplayFor(model => model.IsActive)
+                            </div>
+                            <form asp-action="Delete">
+                                <input type="hidden" asp-for="ProductId" />
+                                <input type="submit" value="Xóa" class="btn btn-danger" /> |
+                                <a asp-action="Index" class="btn btn-primary">Quay lại</a>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!--/.col (left) -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
