@@ -5,86 +5,123 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<div class="content-wrapper">
+<h1>Details</h1>
 
-
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- left column -->
-                <div class="col-md-6">
-                    <!-- general form elements -->
-                    <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">Chi tiết sản phẩm</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Tiêu đề: </label>
-                                @Html.DisplayFor(model => model.Title)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Alias: </label>
-                                @Html.DisplayFor(model => model.Alias)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Danh mục: </label>
-                                @Html.DisplayFor(model => model.CategoryProductId)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Mô tả: </label>
-                                @Html.DisplayFor(model => model.Description)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Chi tiết: </label>
-                                @Html.DisplayFor(model => model.Detail)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Ảnh: </label>
-                                <img src="@Html.DisplayFor(model => model.Image)" width="50" height="50" />
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Giá: </label>
-                                @Html.DisplayFor(model => model.Price)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Giá giảm: </label>
-                                @Html.DisplayFor(model => model.PriceSale)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Số lượng: </label>
-                                @Html.DisplayFor(model => model.Quantity)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">SP mới: </label>
-                                @Html.DisplayFor(model => model.IsNew)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Bán chạy: </label>
-                                @Html.DisplayFor(model => model.IsBestSeller)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Sao: </label>
-                                @Html.DisplayFor(model => model.Star)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Hiện: </label>
-                                @Html.DisplayFor(model => model.IsActive)
-                            </div>
-                            <form asp-action="Index">
-                                <a asp-action="Index" class="btn btn-primary">Quay lại</a>
-                            </form>
-
-                        </div>
-                    </div>
-                    <!-- /.card -->
-                </div>
-                <!--/.col (left) -->
-            </div>
-            <!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+<div>
+    <h4>TbProduct</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alias)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alias)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PriceSale)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PriceSale)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsNew)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsNew)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsBestSeller)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsBestSeller)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UnitInStock)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UnitInStock)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Star)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Star)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CategoryProduct)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CategoryProduct.CategoryProductId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ProductId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

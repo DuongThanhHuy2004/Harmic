@@ -18,7 +18,7 @@
 }
 
 <script>
-    (function (factory) {
+    (function(factory) {
         if (typeof define === 'function' && define.amd) {
             define(['jquery'], factory);
         }
@@ -27,19 +27,19 @@
         } else {
             factory(window.jQuery);
         }
-    }(function ($) {
+    }(function($) {
         $.extend($.summernote.plugins, {
             // Tạo plugin tên elfinder
-            'elfinder': function (context) {
+            'elfinder': function(context) {
                 var self = this;
                 // ui has renders to build ui elements.
                 var ui = $.summernote.ui;
                 // Tạo nút bấm
-                context.memo('button.elfinder', function () {
+                context.memo('button.elfinder', function() {
                     var button = ui.button({
                         contents: '<i class="note-icon-picture"/>&nbsp;&nbsp;Images',
                         tooltip: 'Quản lý ảnh',
-                        click: function () {
+                        click: function() {
                             // Bấm vào nút bấm gọi hàm elfinderDialog
                             elfinderDialog(context);
                         }
@@ -50,7 +50,7 @@
                 });
                 // This methods will be called when editor is destroyed by $('..').summernote('destroy');
                 // You should remove elements on `initialize`.
-                this.destroy = function () {
+                this.destroy = function() {
                     this.$panel.remove();
                     this.$panel = null;
                 };
@@ -67,7 +67,7 @@
             width: 840,
             height: 450,
             destroyOnClose: true,
-            getFileCallback: function (files, fm) {
+            getFileCallback: function(files, fm) {
                 console.log(files);
                 editor.invoke('editor.insertImage', files.url);
             },
@@ -121,7 +121,7 @@
             height: 450,
             destroyOnClose: true,
             closeOnEditorCallback: true,
-            getFileCallback: function (files) {
+            getFileCallback: function(files) {
                 document.getElementById('file_input').value = files.url;
             },
             commandsOptions: {
@@ -164,10 +164,10 @@
         }).dialogelfinder('instance');
     }
 
-    $(document).ready(function () {
+    jQuery(document).ready(function() {
         $('@Model.IDEditor').summernote({
             height: @Model.Height,
             toolbar: @Html.Raw(Model.toolBar)
-        });
+            });
     });
 </script>

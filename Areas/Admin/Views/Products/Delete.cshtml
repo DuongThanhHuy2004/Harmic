@@ -1,80 +1,127 @@
 ﻿@model Harmic.Models.TbProduct
 
 @{
-    ViewData["Title"] = "Delete";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Delete";
+	Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <div class="content-wrapper">
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<div class="container-fluid">
+			<div class="row mb-2">
+				<div class="col-sm-6">
+					<h1>Xóa sản phẩm</h1>
+				</div>
+				<div class="col-sm-6">
+					<ol class="breadcrumb float-sm-right">
+						<li class="breadcrumb-item"><a href="#">Home</a></li>
+						<li class="breadcrumb-item active">General Form</li>
+					</ol>
+				</div>
+			</div>
+		</div><!-- /.container-fluid -->
+	</section>
 
+	<!-- Main content -->
+	<section class="content">
+		<div class="container-fluid">
+			<div class="row">
+				<!-- left column -->
+				<div class="col-md-12">
+					<!-- general form elements -->
+					<div class="card card-primary">
+						<div class="card-header">
+							<h3 class="card-title">Xóa sản phẩm</h3>
+						</div>
+						<!-- /.card-header -->
+						<!-- form start -->
+						<form asp-action="Delete">
+							<div class="card-body">
+								<div class="form-group">
+									<label class="control-label">Tiêu đề</label>
+									@Html.DisplayFor(Model => Model.Title)
+								</div><div class="form-group">
+									<label class="control-label">Alias</label>
+									@Html.DisplayFor(Model => Model.Alias)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Danh mục</label>
+									@Html.DisplayFor(Model => Model.CategoryProduct.Title)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Mô tả</label>
+									@Html.DisplayFor(Model => Model.Description)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Chi tiết</label>
+									@Html.DisplayFor(Model => Model.Detail)
+								</div><div class="form-group">
+									<label class="control-label">Ảnh</label>
+									<img src="/assets/images/product/medium-size/@Html.DisplayFor(modelItem => Model.Image)" width="50" height="50" />
+								</div><div class="form-group">
+									<label class="control-label">Giá</label>
+									@Html.DisplayFor(Model => Model.Price)
+								</div><div class="form-group">
+									<label class="control-label">Giá khuyến mãi</label>
+									@Html.DisplayFor(Model => Model.PriceSale)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Số lượng</label>
+									@Html.DisplayFor(Model => Model.Quantity)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Ngày tạo</label>
+									@Html.DisplayFor(Model => Model.CreatedDate)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Người tạo</label>
+									@Html.DisplayFor(Model => Model.CreatedBy)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Ngày đăng bán</label>
+									@Html.DisplayFor(Model => Model.ModifiedDate)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Người đăng bán</label>
+									@Html.DisplayFor(Model => Model.ModifiedBy)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Mới</label>
+									@Html.DisplayFor(Model => Model.IsNew)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Bán chạy</label>
+									@Html.DisplayFor(Model => Model.IsBestSeller)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Tồn kho</label>
+									@Html.DisplayFor(Model => Model.UnitInStock)
+								</div>
+								<div class="form-group">
+									<label class="control-label">Sao</label>
+									@Html.DisplayFor(Model => Model.Star)
+								</div>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- left column -->
-                <div class="col-md-6">
-                    <!-- general form elements -->
-                    <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">Xóa sản phẩm</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Tiêu đề: </label>
-                                @Html.DisplayFor(model => model.Title)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Alias: </label>
-                                @Html.DisplayFor(model => model.Alias)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Ảnh: </label>
-                                <img src="@Html.DisplayFor(model => model.Image)" width="50" height="50"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Giá: </label>
-                                @Html.DisplayFor(model => model.Price)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Giá giảm: </label>
-                                @Html.DisplayFor(model => model.PriceSale)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Số lượng: </label>
-                                @Html.DisplayFor(model => model.Quantity)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">SP mới: </label>
-                                @Html.DisplayFor(model => model.IsNew)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Bán chạy: </label>
-                                @Html.DisplayFor(model => model.IsBestSeller)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Sao: </label>
-                                @Html.DisplayFor(model => model.Star)
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Hiện: </label>
-                                @Html.DisplayFor(model => model.IsActive)
-                            </div>
-                            <form asp-action="Delete">
-                                <input type="hidden" asp-for="ProductId" />
-                                <input type="submit" value="Xóa" class="btn btn-danger" /> |
-                                <a asp-action="Index" class="btn btn-primary">Quay lại</a>
-                            </form>
+								<div class="form-group">
+									<label class="control-label">Hiện</label>
+									@Html.DisplayFor(Model => Model.IsActive)
+								</div>
+							</div>
+							<!-- /.card-body -->
 
-                        </div>
-                    </div>
-                    <!-- /.card -->
-                </div>
-                <!--/.col (left) -->
-            </div>
-            <!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+							<div class="card-footer">
+								<button type="submit" class="btn btn-danger">Xóa sản phẩm</button>
+								<button asp-action="Index" type="submit" class="btn btn-primary">Quay lại</button>
+							</div>
+						</form>
+					</div>
+					<!-- /.card -->
+				</div>
+				<!--/.col (left) -->
+			</div>
+			<!-- /.row -->
+		</div><!-- /.container-fluid -->
+	</section>
+	<!-- /.content -->
 </div>

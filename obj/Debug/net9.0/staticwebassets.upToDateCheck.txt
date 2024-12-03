@@ -281,6 +281,7 @@ C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\moment\locale\bo
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\pace-progress\themes\pink\pace-theme-fill-left.css
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\flags\1x1\es-ct.svg
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\summernote\lang\summernote-sr-RS-Latin.js
+C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\assets\toastr\toastr.css
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\codemirror\mode\xquery\xquery.js
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\flags\1x1\um.svg
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\summernote\summernote.min.js.LICENSE.txt
@@ -963,6 +964,7 @@ C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\bs-custom-file-i
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\flags\4x3\ee.svg
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\codemirror\mode\julia\julia.js
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\flags\1x1\sv.svg
+C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\assets\toastr\toastr.min.js
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\lib\jqueryui\themes\themes\eggplant\theme.css
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\flags\4x3\kr.svg
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\codemirror\mode\sas\sas.js
@@ -1930,6 +1932,7 @@ C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\fl
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\jquery-mapael\maps\world_countries.min.js
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\jquery-validation\localization\methods_es_CL.js
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\flags\1x1\mg.svg
+C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\assets\toastr\toastr.min.css
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\lib\jqueryui\themes\themes\flick\jquery-ui.min.css
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\flags\1x1\cl.svg
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\jquery-ui\LICENSE.txt
@@ -2039,6 +2042,7 @@ C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\fl
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\flags\4x3\it.svg
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\dist\css\alt\adminlte.extra-components.css.map
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\flag-icon-css\flags\4x3\pm.svg
+C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\assets\toastr\toastr.js.map
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\summernote\summernote-bs5.js
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\dist\css\alt\adminlte.plugins.min.css
 C:\Users\thanh\source\repos\Harmic\Harmic\wwwroot\admin\plugins\codemirror\theme\ayu-mirage.css
@@ -5681,6 +5685,10 @@ wwwroot\assets\scss\bootstrap\mixins\_visually-hidden.scss
 wwwroot\assets\scss\bootstrap\utilities\_api.scss
 wwwroot\assets\scss\bootstrap\vendor\_rfs.scss
 wwwroot\assets\scss\style.scss
+wwwroot\assets\toastr\toastr.css
+wwwroot\assets\toastr\toastr.js.map
+wwwroot\assets\toastr\toastr.min.css
+wwwroot\assets\toastr\toastr.min.js
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\files\k2.jpeg
