@@ -34,5 +34,27 @@ namespace Harmic.Controllers
             ViewBag.blogComment = _context.TbBlogComments.Where(i => i.BlogId == id).ToList();
             return View(blog);
         }
+
+        public IActionResult Create(string name, string phone, string email, string detail, int blogid)
+        {
+            try
+            {
+                TbBlogComment blogComment = new TbBlogComment();
+                blogComment.Name = name;
+                blogComment.Phone = phone;
+                blogComment.Email = email;
+                blogComment.Detail = detail;
+                blogComment.BlogId = blogid;
+                blogComment.IsActive = true;
+                blogComment.CreatedDate = DateTime.Now;
+                _context.Add(blogComment);
+                _context.SaveChanges();
+                return Json(new { status = true });
+            }
+            catch
+            {
+                return Json(new { status = false });
+            }
+        }
     }
 }

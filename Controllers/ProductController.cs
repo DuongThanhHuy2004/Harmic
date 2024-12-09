@@ -38,5 +38,27 @@ namespace Harmic.Controllers
                 Where(i => i.ProductId != id && i.CategoryProductId == product.CategoryProductId).Take(5).OrderByDescending(i => i.ProductId).ToList();
             return View(product);
         }
+
+        public IActionResult Create(string name, string phone, string email, string detail, int productid)
+        {
+            try
+            {
+                TbProductReview productReview = new TbProductReview();
+                productReview.Name = name;
+                productReview.Phone = phone;
+                productReview.Email = email;
+                productReview.Detail = detail;
+                productReview.ProductId = productid;
+                productReview.IsActive = true;
+                productReview.CreatedDate = DateTime.Now;
+                _context.Add(productReview);
+                _context.SaveChanges();
+                return Json(new { status = true });
+            }
+            catch
+            {
+                return Json(new { status = false });
+            }
+        }
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Harmic.Models;
+using Harmic.Utilities;
 
 namespace Harmic.Areas.Admin.Controllers
 {
@@ -22,6 +23,8 @@ namespace Harmic.Areas.Admin.Controllers
         // GET: Admin/Products
         public async Task<IActionResult> Index()
         {
+            if (!Function.IsLogin())
+                return RedirectToAction("Index", "Login");
             var harmicContext = _context.TbProducts.Include(t => t.CategoryProduct);
             return View(await harmicContext.ToListAsync());
         }

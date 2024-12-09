@@ -5692,6 +5692,7 @@ wwwroot\assets\toastr\toastr.min.js
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\files\k2.jpeg
+wwwroot\files\Screenshot (164).png
 wwwroot\files\Screenshot (39).png
 wwwroot\files\shiatzy.jpg
 wwwroot\files\z5853225632725_291adfba43b3f836f5e8a3f5c565409f.jpg
